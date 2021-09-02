@@ -15,6 +15,8 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'Deploying....'
+        def workspace = pwd()
+        sh echo ${workspace}
       }
     }
   }
