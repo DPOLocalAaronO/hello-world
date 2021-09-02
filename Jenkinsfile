@@ -1,7 +1,7 @@
 pipeline {
   agent any
   
-  def workspace = pwd()
+  //def workspace = pwd()
   
   stages {
     stage('Build') {
@@ -17,7 +17,7 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'Deploying....'
-        sh echo ${workspace}
+        sh echo ${pwd()}
       }
     }
   }
