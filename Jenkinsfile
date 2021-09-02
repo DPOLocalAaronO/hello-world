@@ -1,7 +1,3 @@
-node {
-
-def workspace = pwd()
-
 pipeline {
   
   agent any
@@ -20,10 +16,11 @@ pipeline {
     stage('Deploy') {
       steps {
         echo 'Deploying....'
-        sh 'echo ${workspace}'
+        script {
+          def workspace = pwd()
+          sh 'echo ${workspace}'
+        }
       }
     }
   }
-}
-  
 }
