@@ -18,7 +18,7 @@ pipeline {
         echo 'Deploying....'
         script {
           def workspace = pwd()
-          sh 'echo ${workspace}'
+          sh 'echo $(workspace)'
         }
       }
     }
