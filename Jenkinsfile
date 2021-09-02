@@ -17,7 +17,7 @@ pipeline {
       steps {
         echo 'Deploying....'
         script {
-          sh 'echo $(pwd())'
+          sh 'echo $(workspace)'
         }
       }
     }
