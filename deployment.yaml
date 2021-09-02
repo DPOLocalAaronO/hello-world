@@ -15,7 +15,6 @@ spec:
         app: hello-world
     spec:
       containers:
-      - name: hello-world
-        image: tutum/hello-world
+      - image: nginx
         ports:
         - containerPort: 80
