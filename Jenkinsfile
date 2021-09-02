@@ -17,8 +17,7 @@ pipeline {
       steps {
         echo 'Deploying....'
         script {
-          sh 'echo $(ls -a)'
-          sh 'echo $(workspace)'
+          sh 'kubectl apply -f deployment.yaml'
         }
       }
     }
