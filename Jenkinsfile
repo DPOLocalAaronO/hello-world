@@ -17,7 +17,7 @@ pipeline {
       steps {
         echo 'Deploying....'
         script {
-          sh 'kubectl apply -f deployment.yaml -f service.yaml'
+          sh 'kubectl apply -f deployment.yaml -f service.yaml -f ingress.yaml'
         }
       }
     }
